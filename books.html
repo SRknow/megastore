@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse our extensive collection of books at MegaStore - bestsellers, new releases, and all your favorite genres">
+    <title>Books - MegaStore</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="top-bar">
+                <div class="logo">Mega<span>Store</span></div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for books...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-actions">
+                    <a href="#account"><i class="fas fa-user"></i></a>
+                    <a href="#cart"><i class="fas fa-shopping-cart"></i></a>
+                    <a href="#wishlist"><i class="fas fa-heart"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <nav>
+            <div class="container">
+                <button class="menu-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="books.html" class="active">Books</a></li>
+                    <li><a href="#movies">Movies</a></li>
+                    <li><a href="#electronics">Electronics</a></li>
+                    <li><a href="#apparel">Apparel</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Books Hero Section -->
+    <section class="hero books-hero">
+        <div class="hero-content">
+            <h1>Discover Your Next Great Read</h1>
+            <p>Explore our vast collection of books across all genres</p>
+            <a href="#books-collection" class="btn">Browse Collection</a>
+        </div>
+    </section>
+
+    <!-- Books Filter Section -->
+    <section class="container filter-section">
+        <div class="filter-options">
+            <div class="filter-group">
+                <h3>Categories</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="fiction">Fiction</button>
+                    <button class="filter-btn" data-filter="non-fiction">Non-Fiction</button>
+                    <button class="filter-btn" data-filter="sci-fi">Sci-Fi & Fantasy</button>
+                    <button class="filter-btn" data-filter="mystery">Mystery & Thriller</button>
+                    <button class="filter-btn" data-filter="romance">Romance</button>
+                    <button class="filter-btn" data-filter="biography">Biography</button>
+                    <button class="filter-btn" data-filter="children">Children's Books</button>
+                </div>
+            </div>
+            
+            <div class="filter-group">
+                <h3>Sort By</h3>
+                <select id="sort-options">
+                    <option value="popularity">Popularity</option>
+                    <option value="newest">Newest Arrivals</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="rating">Customer Rating</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Books Collection Section -->
+    <section class="container" id="books-collection">
+        <h2 class="section-title">Our Book Collection</h2>
+        
+        <!-- New Arrivals -->
+        <div class="books-section">
+            <h3 class="subsection-title">New Arrivals <span class="see-all">See All</span></h3>
+            <div class="books-grid">
+                <div class="book-card" data-category="fiction" data-price="24.99" data-rating="4.5" data-date="2023-06-15">
+                    <div class="book-cover" style="background-image: url('https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80');">
+                        <span class="new-badge">New</span>
+                    </div>
+                    <div class="book-details">
+                        <h4>The Midnight Library</h4>
+                        <p class="book-author">Matt Haig</p>
+                        <div class="book-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-value">4.5</span>
+                        </div>
+                        <div class="book-price">$24.99</div>
+                        <div class="book-actions">
+                            <a href="#" class="btn add-to-cart">Add to Cart</a>
+                            <a href="#"><i class="fas fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="book-card" data-category="non-fiction" data-price="29.99" data-rating="4.7" data-date="2023-06-10">
+                    <div class="book-cover" style="background-image: url('https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80');">
+                        <span class="new-badge">New</span>
+                    </div>
+                    <div class="book-details">
+                        <h4>Atomic Habits</h4>
+                        <p class="book-author">James Clear</p>
+                        <div class="book-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-value">4.7</span>
+                        </div>
+                        <div class="book-price">$29.99</div>
+                        <div class="book-actions">
+                            <a href="#" class="btn add-to-cart">Add to Cart</a>
+                            <a href="#"><i class="fas fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="book-card" data-category="sci-fi" data-price="22.99" data-rating="4.3" data-date="2023-06-05">
+                    <div class="book-cover" style="background-image: url('https://images.unsplash.com/photo-1531072901881-d644216d4bf5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');">
+                        <span class="new-badge">New</span>
+                    </div>
+                    <div class="book-details">
+                        <h4>Project Hail Mary</h4>
+                        <p class="book-author">Andy Weir</p>
+                        <div class="book-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="rating-value">4.3</span>
+                        </div>
+                        <div class="book-price">$22.99</div>
+                        <div class="book-actions">
+                            <a href="#" class="btn add-to-cart">Add to Cart</a>
+                            <a href="#"><i class="fas fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="book-card" data-category="mystery" data-price="19.99" data-rating="4.6" data-date="2023-05-28">
+                    <div class="book-cover" style="background-image: url('https://images.unsplash.com/photo-1629992101753-56d196c8aabb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');">
+                        <span class="new-badge">New</span>
+                    </div>
+                    <div class="book-details">
+                        <h4>The Silent Patient</h4>
+                        <p class="book-author">Alex Michaelides</p>
+                        <div class="book-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-value">4.6</span>
+                        </div>
+                        <div class="book-price">$19.99</div>
+                        <div class="book-actions">
+                            <a href="#" class="btn add-to-cart">Add to Cart</a>
+                            <a href="#"><i class="fas fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bestsellers -->
+        <div class="books-section">
+            <h3 class="subsection-title">Bestsellers <span class="see-all">See All</span></h3>
+            <div class="books-grid">
+                <div class="book-card" data-category="fiction" data-price="27.99" data-rating="4.8" data-date="2022-11-10">
+                    <div class="book-cover" style="background-image: url('https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1198&q=80');">
+                        <span class="bestseller-badge">Bestseller</span>
+                    </div>
+                    <div class="book-details">
+                        <h4>It Ends With Us</h4>
+                        <p class="book-author">Colleen Hoover</p>
+                        <div class="book-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-value">4.8</span>
+                        </div>
+                        <div class="book-price">$27.99</div>
+                        <div class="book-actions">
+                            <a href="#" class="btn add-to-cart">Add to Cart</a>
+                            <a href="#"><i class="fas fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="book-card" data-category="non-fiction" data-price="26.99" data-rating="4.9" data-date="2022-08-15">
+                    <div class="book-cover" style="background-image: url('https://images.unsplash.com/photo-1558901357-ca41e027e43a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1175&q=80');">
+                        <span class="bestseller-badge">Bestseller</span>
+                    </div>
+                    <div class="book-details">
+                        <h4>The Psychology of Money</h4>
+                        <p class="book-author">Morgan Housel</p>
+                        <div class="book-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-value">4.9</span>
+                        </div>
+                        <div class="book-price">$26.99</div>
+                        <div class="book-actions">
+                            <a href="#" class="btn add-to-cart">Add to Cart</a>
+                            <a href="#"><i class="fas fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="book-card" data-category="fiction" data-price="25.99" data-rating="4.7" data-date="2023-01-20">
+                    <div class="book-cover" style="background-image: url('https://images.unsplash.com/photo-1516979187457-637abb4f9353?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');">
+                        <span class="bestseller-badge">Bestseller</span>
+                    </div>
+                    <div class="book-details">
+                        <h4>Verity</h4>
+                        <p class="book-author">Colleen Hoover</p>
+                        <div class="book-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-value">4.7</span>
+                        </div>
+                        <div class="book-price">$25.99</div>
+                        <div class="book-actions">
+                            <a href="#" class="btn add-to-cart">Add to Cart</a>
+                            <a href="#"><i class="fas fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="book-card" data-category="children" data-price="18.99" data-rating="4.8" data-date="2022-10-05">
+                    <div class="book-cover" style="background-image: url('https://images.unsplash.com/photo-1596466596120-2a8e4b5d1a51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');">
+                        <span class="bestseller-badge">Bestseller</span>
+                    </div>
+                    <div class="book-details">
+                        <h4>The Wonderful Things</h4>
+                        <p class="book-author">Emily Winfield Martin</p>
+                        <div class="book-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-value">4.8</span>
+                        </div>
+                        <div class="book-price">$18.99</div>
+                        <div class="book-actions">
+                            <a href="#" class="btn add-to-cart">Add to Cart</a>
+                            <a href="#"><i class="fas fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated on New Releases</h2>
+                <p>Subscribe to our newsletter for the latest book recommendations and exclusive deals.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Book Categories</h3>
+                    <ul>
+                        <li><a href="#fiction">Fiction</a></li>
+                        <li><a href="#non-fiction">Non-Fiction</a></li>
+                        <li><a href="#sci-fi">Sci-Fi & Fantasy</a></li>
+                        <li><a href="#mystery">Mystery & Thriller</a></li>
+                        <li><a href="#romance">Romance</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#delivery">Delivery Information</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms & Conditions</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Account</h3>
+                    <ul>
+                        <li><a href="#account">My Account</a></li>
+                        <li><a href="#orders">Order History</a></li>
+                        <li><a href="#wishlist">Wish List</a></li>
+                        <li><a href="#newsletter">Newsletter</a></li>
+                        <li><a href="#returns">Returns</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <p>1234 Commerce Street<br>Cityville, ST 12345</p>
+                    <p>Phone: (123) 456-7890<br>Email: books@megastore.com</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-goodreads"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 MegaStore. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="books.js"></script>
+</body>
+</html>

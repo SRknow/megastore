@@ -20,7 +20,7 @@
                     <button><i class="fas fa-search"></i></button>
                 </div>
                 <div class="user-actions">
-                    <a href="#account"><i class="fas fa-user"></i></a>
+                    <a href="#" id="account-btn"><i class="fas fa-user"></i></a>
                     <a href="#cart"><i class="fas fa-shopping-cart"></i></a>
                     <a href="#wishlist"><i class="fas fa-heart"></i></a>
                 </div>
@@ -34,15 +34,15 @@
                     <span></span>
                     <span></span>
                 </button>
-                 <ul class="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="books.html">Books</a></li> <!-- Updated to link to books.html -->
-            <li><a href="#movies">Movies</a></li>
-            <li><a href="#electronics">Electronics</a></li>
-            <li><a href="#apparel">Apparel</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#news">News</a></li>
-            <li><a href="#contact">Contact</a></li>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="books.html">Books</a></li>
+                    <li><a href="#movies">Movies</a></li>
+                    <li><a href="#electronics">Electronics</a></li>
+                    <li><a href="#apparel">Apparel</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -66,7 +66,7 @@
                 <div class="category-content">
                     <h3>Books</h3>
                     <p>Best Sellers & New Releases</p>
-                    <a href="#books" class="btn category-btn">Explore</a>
+                    <a href="books.html" class="btn category-btn">Explore</a>
                 </div>
             </div>
             
@@ -249,7 +249,7 @@
                 <div class="footer-column">
                     <h3>Shop</h3>
                     <ul>
-                        <li><a href="#books">Books</a></li>
+                        <li><a href="books.html">Books</a></li>
                         <li><a href="#movies">Movies</a></li>
                         <li><a href="#electronics">Electronics</a></li>
                         <li><a href="#apparel">Apparel</a></li>
@@ -298,7 +298,135 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
-</body>
+    <!-- Account Modal -->
+    <div id="account-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2>Account</h2>
+            </div>
+            <div class="modal-body">
+                <div class="account-options">
+                    <button class="account-option-btn" data-action="login">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span>Login</span>
+                    </button>
+                    <button class="account-option-btn" data-action="register">
+                        <i class="fas fa-user-plus"></i>
+                        <span>Register</span>
+                    </button>
+                    <button class="account-option-btn" data-action="help">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Help</span>
+                    </button>
+                </div>
+                
+                <!-- Login Form (initially hidden) -->
+                <div id="login-form" class="account-form hidden">
+                    <h3>Login to Your Account</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="login-email">Email</label>
+                            <input type="email" id="login-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password">Password</label>
+                            <input type="password" id="login-password" required>
+                        </div>
+                        <div class="form-options">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="remember-me">
+                                <span class="checkmark"></span>
+                                Remember me
+                            </label>
+                            <a href="#forgot-password" class="forgot-link">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="btn btn-full">Login</button>
+                    </form>
+                    <p class="form-switch">Don't have an account? <a href="#" data-action="register">Register</a></p>
+                </div>
+                
+                <!-- Registration Form (initially hidden) -->
+                <div id="register-form" class="account-form hidden">
+                    <h3>Create an Account</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="register-name">Full Name</label>
+                            <input type="text" id="register-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-email">Email</label>
+                            <input type="email" id="register-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-password">Password</label>
+                            <input type="password" id="register-password" required>
+                            <div class="password-requirements">
+                                <p>Password must contain:</p>
+                                <ul>
+                                    <li class="req-upper">At least one uppercase letter</li>
+                                    <li class="req-lower">At least one lowercase letter</li>
+                                    <li class="req-number">At least one number</li>
+                                    <li class="req-length">At least 8 characters</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-confirm">Confirm Password</label>
+                            <input type="password" id="register-confirm" required>
+                        </div>
+                        <div class="form-options">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="terms-agree" required>
+                                <span class="checkmark"></span>
+                                I agree to the <a href="#terms">Terms & Conditions</a>
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="newsletter-subscribe">
+                                <span class="checkmark"></span>
+                                Subscribe to newsletter
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-full">Create Account</button>
+                    </form>
+                    <p class="form-switch">Already have an account? <a href="#" data-action="login">Login</a></p>
+                </div>
+                
+                <!-- Help Section (initially hidden) -->
+                <div id="help-section" class="account-form hidden">
+                    <h3>Help & Support</h3>
+                    <div class="help-content">
+                        <div class="help-category">
+                            <h4><i class="fas fa-shopping-cart"></i> Order Assistance</h4>
+                            <p>Need help with an existing order or want to know about delivery options?</p>
+                            <a href="#order-help" class="help-link">View order help</a>
+                        </div>
+                        
+                        <div class="help-category">
+                            <h4><i class="fas fa-undo"></i> Returns & Refunds</h4>
+                            <p>Information about our return policy and how to request a refund.</p>
+                            <a href="#returns-help" class="help-link">Return policy</a>
+                        </div>
+                        
+                        <div class="help-category">
+                            <h4><i class="fas fa-user-shield"></i> Account & Security</h4>
+                            <p>Help with account access, password reset, and security questions.</p>
+                            <a href="#account-help" class="help-link">Account help</a>
+                        </div>
+                        
+                        <div class="contact-info">
+                            <h4>Contact Us</h4>
+                            <p><i class="fas fa-phone"></i> <strong>Phone:</strong> (123) 456-7890</p>
+                            <p><i class="fas fa-envelope"></i> <strong>Email:</strong> support@megastore.com</p>
+                            <p><i class="fas fa-clock"></i> <strong>Hours:</strong> Mon-Fri 9AM-6PM, Sat 10AM-4PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <script src="script.js"></script>
+    <script src="account.js"></script>
+</body>
 </html>
